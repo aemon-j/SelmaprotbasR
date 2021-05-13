@@ -72,7 +72,7 @@ run_gotm_sp_Win <- function(sim_folder, yaml_file = "gotm.yaml", verbose = TRUE,
 run_gotm_sp_NIX <- function(sim_folder, verbose = TRUE, args){
   origin <- getwd()
   setwd(sim_folder)
-  gotm_path <- system.file("exec/nixgotm", package="SelmaprotbasR")
+  gotm_path <- system.file("exec/nixgotm_sp", package="SelmaprotbasR")
   Sys.setenv(LD_LIBRARY_PATH = paste(system.file("extbin/nix",
                                                  package = "SelmaprotbasR"),
                                    Sys.getenv("LD_LIBRARY_PATH"), 
@@ -118,6 +118,6 @@ gotm.systemcall <- function(sim_folder, gotm_path, verbose, system.args){
 
 ### macOS ###
 run_gotm_sp_OSx <- function(sim_folder, verbose, args){
-  gotm_path <- system.file("exec/macgotm", package = "GOTMr")
+  gotm_path <- system.file("exec/macgotm_sp", package = "SelmaprotbasR")
   gotm.systemcall(sim_folder = sim_folder, gotm_path = gotm_path, verbose = verbose, system.args = args)
 }

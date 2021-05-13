@@ -1,0 +1,12 @@
+Package: SelmaprotbasR
+Title: Work with GOTM-Selmaprotbas in R
+Version: 1.0.0
+Authors@R: person("Jorrit", "Mesman", email = "jorrit.mesman@unige.ch", role = c("aut", "cre"))
+Description: Run the General Ocean Turbulence Model (GOTM) coupled to Selmaprotbas through R. Comes with a compiled version of GOTM-Selmaprotbas and uses wrapper functions to enable the running the model in R.
+Depends: R (>= 3.1.1)
+License: GPL3
+Encoding: UTF-8
+LazyData: true
+Imports: utils
+Suggests:
+RoxygenNote: 7.1.1

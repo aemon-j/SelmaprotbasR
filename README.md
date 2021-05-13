@@ -28,7 +28,7 @@ sudo apt-get install libnetcdff6
 
 ```{r example, eval=FALSE}
 library(SelmaprotbasR)
-sim_folder <- system.file('extdata', package = 'SelmaprotbasR')
+sim_folder <- system.file("extdata", package = "SelmaprotbasR")
 run_gotm(sim_folder)
 ```
 

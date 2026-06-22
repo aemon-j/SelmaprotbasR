@@ -43,7 +43,7 @@ run_gotm_sp <- function(sim_folder = ".", yaml_file = "gotm.yaml", verbose = FAL
 run_gotm_sp_Win <- function(sim_folder, yaml_file = "gotm.yaml", verbose = TRUE, args){
 
   if(.Platform$r_arch == "x64"){
-    gotm_path <- system.file("extbin/win64GOTM/gotm_sp.exe", package = "SelmaprotbasR")
+    gotm_path <- system.file("extbin/win64GOTM/gotm_v1_2_2.exe", package = "SelmaprotbasR")
   }else{
     stop("No GOTM-Selmaprotbas executable available for your machine yet...")
   }
@@ -72,7 +72,7 @@ run_gotm_sp_Win <- function(sim_folder, yaml_file = "gotm.yaml", verbose = TRUE,
 run_gotm_sp_NIX <- function(sim_folder, verbose = TRUE, args){
   origin <- getwd()
   setwd(sim_folder)
-  gotm_path <- system.file("exec/nixgotm_sp", package="SelmaprotbasR")
+  gotm_path <- system.file("exec/gotm", package="SelmaprotbasR")
   Sys.setenv(LD_LIBRARY_PATH = paste(system.file("extbin/nix",
                                                  package = "SelmaprotbasR"),
                                    Sys.getenv("LD_LIBRARY_PATH"), 
